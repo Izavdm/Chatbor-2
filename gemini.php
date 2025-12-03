@@ -1,9 +1,9 @@
 <?php
-header('Content-Type: application/json');
+header("Content-Type: application/json");
 
 $mensagem = $_POST["mensagem"] ?? "";
 
-$api_key = "AIzaSyCrXV8AnjD723SkzLDVZ4mu8SxD1he0MxU";
+$api_key = "AIzaSyBJQqbTizGXk9g6NkuhtGRdH7lm8sgdpA0";
 
 $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" . $api_key;
 
@@ -12,7 +12,6 @@ Você é um assistente virtual que explica conceitos básicos de enfermagem com 
 Responda SEMPRE de forma bem resumida (no máximo 3 frases).
 Use apenas texto simples, sem negrito, sem asteriscos e sem formatação.
 Fale simples, como se fosse para iniciantes.
-Responda o que foi perguntado.
 
 
 Mensagem: $mensagem
@@ -30,7 +29,7 @@ $data = [
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
