@@ -20,7 +20,7 @@ function enviarMensagem() {
     if (msg.trim() === "") return;
 
     mostrarMensagem("Você: " + msg, "mensagem-user");
-    
+
     document.getElementById("campoMensagem").value = "";
 
     fetch("gemini.php", {
@@ -37,4 +37,21 @@ function enviarMensagem() {
     .catch(()=>{
         mostrarMensagem("Chatbot: Erro ao se conectar ao servidor.", "mensagem-bot");
     });
+}
+
+function limparChat() {
+    document.getElementById("chat").innerHTML = "";
+}
+
+let tamanhoFonte = 16;
+
+function aumentarFonte() {
+    tamanhoFonte += 2;
+    document.getElementById("chat").style.fontSize = tamanhoFonte + "px";
+}
+
+function diminuirFonte() {
+    tamanhoFonte -= 2;
+    if(tamanhoFonte < 10) tamanhoFonte = 10;
+    document.getElementById("chat").style.fontSize = tamanhoFonte + "px";
 }
