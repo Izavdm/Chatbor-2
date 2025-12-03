@@ -1,1 +1,95 @@
+/* Fonte limpa e moderna */
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #cce0ff, #f0f4ff); /* degrade azul suave */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Container principal */
+.container {
+    width: 450px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1f3a60; /* azul escuro elegante */
+    font-weight: 700;
+}
+
+/* Campo de mensagem */
+#campoMensagem {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #c0c7d1;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+#campoMensagem:focus {
+    border-color: #2e5bb7;
+    box-shadow: 0 0 0 3px #2e5bb733;
+}
+
+/* Botão */
+button {
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #2e5bb7;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1f3a60;
+}
+
+/* Área do chat */
+#chat {
+    margin-top: 20px;
+    width: 100%;
+    height: 260px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f5f7fa;
+    border-radius: 12px;
+    border: 1px solid #d1d7e0;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Scroll estilizado */
+#chat::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background: #a8b5c8;
+    border-radius: 10px;
+}
+
+#chat::-webkit-scrollbar-track {
+    background: #e6ebf2;
+}
